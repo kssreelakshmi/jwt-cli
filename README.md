@@ -84,6 +84,7 @@ This runs 4 unit tests covering:
 - Successfully decoding a valid base64url segment
 - Handling an invalid/malformed segment
 
+![go test output](./test-output.png)
 ## What I learned
 
 This was my first real Go project. Coming from Python, the things that stood out most were Go's explicit error handling (no exceptions, just checking `err != nil` everywhere), how JSON numbers always unmarshal as `float64` (so I had to cast `exp` to `int64` before using `time.Unix()`), and that JWT uses unpadded base64url encoding, not standard base64 — I had to use `base64.RawURLEncoding` instead of `base64.StdEncoding`.
